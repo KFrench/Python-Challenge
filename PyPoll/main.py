@@ -41,6 +41,10 @@ with open(election_data, "r") as New:
             winner_count_vote = num_of_vote
             winner = candi_Name 
 
-    print(f"Total Votes:{tot_votes}")
-    print(f"{candi_Name}: {percentage:.3f}% ({num_of_vote})")
-    print(f"Winner: {winner}") 
+        print(f"Total Votes:{tot_votes}")
+        print(f"{candi_Name}: {percentage:.3f}% ({num_of_vote})")
+    print(f"Winner is Khan: {winner}") 
+
+    #export to text file
+    with open('output_Poll.txt', 'w') as datafile:
+        writer =csv.writer(datafile)

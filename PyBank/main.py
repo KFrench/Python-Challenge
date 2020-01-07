@@ -54,11 +54,12 @@ with open(budget_data, "r") as New:
             greatest_decrease_id = min(Great_Increase.keys())
             greatest_decrease_month_id = Great_Increase[greatest_decrease_id]
         cur_month = pre_month 
-
     print(total_change)
     print(f"Average Change:${Average_Change}")
     print(f"Greatest Increase in Profits:{greatest_increase_month_id} {greatest_increase_id}")
     print(f"Greatest Decrease in Profits:{greatest_decrease_month_id} {greatest_decrease_id}")
     
-   
+    #export to text file
+    with open('output_Bank.txt', 'w') as datafile:
+        writer =csv.writer(datafile)
    
